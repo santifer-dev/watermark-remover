@@ -13,7 +13,7 @@ Herramienta CLI para eliminar marcas de agua de imágenes usando inteligencia ar
 
 | Antes | Después |
 |:-----:|:-------:|
-| ![Antes](examples/before.png) | ![Después](examples/after.png) |
+| <img src="examples/before.png" width="400"> | <img src="examples/after.png" width="400"> |
 
 ## Instalación
 
