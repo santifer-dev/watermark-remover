@@ -79,6 +79,17 @@ watermark-remover imagen.png --method opencv
 
 El modelo LaMa (~200MB) se descarga automáticamente en `~/.cache/torch/` la primera vez que se usa.
 
+## Autor
+
+Creado para resolver la molestia de las fotos de perfil con marca de agua de LinkedIn y plataformas similares.
+
+**Santiago Fernández de Valderrama**
+
+- Web: [santifer.io](https://santifer.io)
+- GitHub: [@santifer-dev](https://github.com/santifer-dev)
+- LinkedIn: [/in/santifer](https://linkedin.com/in/santifer)
+- Email: [hola@santifer.io](mailto:hola@santifer.io)
+
 ## Licencia
 
 MIT

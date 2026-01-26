@@ -79,6 +79,17 @@ watermark-remover image.png --method opencv
 
 The LaMa model (~200MB) is automatically downloaded to `~/.cache/torch/` on first use.
 
+## Author
+
+Built to solve the annoyance of watermarked profile photos from LinkedIn and similar platforms.
+
+**Santiago Fernández de Valderrama**
+
+- Web: [santifer.io](https://santifer.io)
+- GitHub: [@santifer-dev](https://github.com/santifer-dev)
+- LinkedIn: [/in/santifer](https://linkedin.com/in/santifer)
+- Email: [hi@santifer.io](mailto:hi@santifer.io)
+
 ## License
 
 MIT
