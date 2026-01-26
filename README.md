@@ -9,6 +9,12 @@ Herramienta CLI para eliminar marcas de agua de imágenes usando inteligencia ar
 - **Fallback inteligente** - usa la esquina de la imagen si no se detecta nada
 - **Método OpenCV alternativo** - opción más rápida para casos simples
 
+## Ejemplo
+
+| Antes | Después |
+|:-----:|:-------:|
+| ![Antes](examples/before.png) | ![Después](examples/after.png) |
+
 ## Instalación
 
 ```bash
