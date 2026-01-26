@@ -1,81 +1,84 @@
 # Watermark Remover
 
-Herramienta CLI para eliminar marcas de agua de imágenes usando inteligencia artificial.
+[![en](https://img.shields.io/badge/lang-en-blue.svg)](README.md)
+[![es](https://img.shields.io/badge/lang-es-yellow.svg)](README.es.md)
 
-## Características
+CLI tool to remove watermarks from images using artificial intelligence.
 
-- **Detección automática** con YOLO - detecta marcas de agua sin configuración manual
-- **Inpainting con LaMa** - reconstruye la imagen de forma realista
-- **Fallback inteligente** - usa la esquina de la imagen si no se detecta nada
-- **Método OpenCV alternativo** - opción más rápida para casos simples
+## Features
 
-## Ejemplo
+- **Automatic detection** with YOLO - detects watermarks without manual configuration
+- **LaMa inpainting** - realistically reconstructs the image
+- **Smart fallback** - uses image corner if nothing is detected
+- **Alternative OpenCV method** - faster option for simple cases
 
-| Antes | Después |
-|:-----:|:-------:|
+## Example
+
+| Before | After |
+|:------:|:-----:|
 | <img src="examples/before.png" width="400"> | <img src="examples/after.png" width="400"> |
 
-## Instalación
+## Installation
 
 ```bash
-# Clonar el repositorio
+# Clone the repository
 git clone https://github.com/santifer-dev/watermark-remover.git
 cd watermark-remover
 
-# Crear entorno virtual (recomendado)
+# Create virtual environment (recommended)
 python -m venv .venv
 source .venv/bin/activate  # Linux/macOS
 # .venv\Scripts\activate   # Windows
 
-# Instalar
+# Install
 pip install -e .
 ```
 
-## Uso
+## Usage
 
 ```bash
-# Uso básico
-watermark-remover imagen.png
+# Basic usage
+watermark-remover image.png
 
-# Especificar salida
-watermark-remover imagen.png -o imagen_limpia.png
+# Specify output
+watermark-remover image.png -o clean_image.png
 
-# Modo verbose (ver detalles)
-watermark-remover imagen.png -v
+# Verbose mode (see details)
+watermark-remover image.png -v
 
-# Forzar limpieza de esquina (sin detección YOLO)
-watermark-remover imagen.png --force-corner
+# Force corner cleaning (no YOLO detection)
+watermark-remover image.png --force-corner
 
-# Ajustar tamaño de la máscara de esquina
-watermark-remover imagen.png --force-corner --corner-width 0.15 --corner-height 0.10
+# Adjust corner mask size
+watermark-remover image.png --force-corner --corner-width 0.15 --corner-height 0.10
 
-# Usar método rápido (OpenCV)
-watermark-remover imagen.png --method opencv
+# Use fast method (OpenCV)
+watermark-remover image.png --method opencv
 ```
 
-## Opciones
+## Options
 
-| Opción | Descripción | Default |
+| Option | Description | Default |
 |--------|-------------|---------|
-| `-o, --output` | Ruta del archivo de salida | `<nombre>_clean.<ext>` |
-| `--confidence` | Umbral de confianza YOLO (0.0-1.0) | 0.5 |
-| `--padding` | Píxeles extra alrededor de la marca | 10 |
-| `--fallback-corner` | Usar esquina si YOLO no detecta | Activado |
-| `--no-fallback` | Desactivar fallback de esquina | - |
-| `--corner` | Esquina para fallback | bottom-right |
-| `--corner-width` | Proporción del ancho (0.0-1.0) | 0.12 |
-| `--corner-height` | Proporción del alto (0.0-1.0) | 0.08 |
-| `--force-corner` | Usar esquina sin detección YOLO | - |
-| `--method` | Método de inpainting: `lama` o `opencv` | lama |
-| `-v, --verbose` | Mostrar información detallada | - |
+| `-o, --output` | Output file path | `<name>_clean.<ext>` |
+| `--confidence` | YOLO confidence threshold (0.0-1.0) | 0.5 |
+| `--padding` | Extra pixels around the watermark | 10 |
+| `--fallback-corner` | Use corner if YOLO doesn't detect | Enabled |
+| `--no-fallback` | Disable corner fallback | - |
+| `--corner` | Corner for fallback | bottom-right |
+| `--corner-width` | Width ratio (0.0-1.0) | 0.12 |
+| `--corner-height` | Height ratio (0.0-1.0) | 0.08 |
+| `--force-corner` | Use corner without YOLO detection | - |
+| `--method` | Inpainting method: `lama` or `opencv` | lama |
+| `-v, --verbose` | Show detailed information | - |
 
-## Requisitos
+## Requirements
 
 - Python 3.10+
-- ~2GB RAM (para el modelo LaMa)
+- ~2GB RAM (for LaMa model)
 
-El modelo LaMa (~200MB) se descarga automáticamente en `~/.cache/torch/` la primera vez que se usa.
+The LaMa model (~200MB) is automatically downloaded to `~/.cache/torch/` on first use.
 
-## Licencia
+## License
 
 MIT
