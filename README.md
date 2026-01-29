@@ -1,6 +1,6 @@
 # Watermark Remover
 
-**[:gb: English](#the-problem)** | **[:es: Español](#-español)**
+**[:gb: English](#the-problem)** | **[:es: Español](#es-español)**
 
 > CLI tool to remove watermarks from images using artificial intelligence.
 
